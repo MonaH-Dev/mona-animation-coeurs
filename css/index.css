@@ -1,0 +1,61 @@
+.to-animate-ctnr {
+  width: 300px;
+  height: 90px;
+  background-color: silver;
+  position: relative;
+}
+
+.to-animate-ctnr .hearts-ctnr {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 30px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.to-animate-ctnr .hearts-ctnr i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+}
+
+.to-animate-ctnr .hearts-ctnr .full-heart-icon {
+  background: -webkit-linear-gradient(purple, #d779d7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.to-animate-ctnr .hearts-ctnr:hover .full-heart-icon, .to-animate-ctnr .hearts-ctnr:active .full-heart-icon {
+  -webkit-animation: blink 0.3s 10;
+          animation: blink 0.3s 10;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */

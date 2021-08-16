@@ -1,0 +1,48 @@
+.to-animate-ctnr {
+    width: 300px;
+    height: 90px;
+    background-color: silver;
+    position: relative;
+    .hearts-ctnr {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 30px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 30px;
+        }
+        .full-heart-icon {
+            background: -webkit-linear-gradient(purple, rgb(215, 121, 215));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+        }
+        &:hover,
+        &:active {
+            .full-heart-icon {
+                animation: blink 0.3s 10;
+                // transition: all 0.3s linear;
+                // opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
